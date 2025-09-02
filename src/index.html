@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout CSS Avançado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="interface"><!-- limites do cabeçalho -->
+            <div class="logo">
+                <p>
+                    Minha Página
+                </p>
+                <!-- display flex ( organização ) aplicada na classe pai  interface e não na classe filha logo-->
+            </div>
+            <nav class="menu-desktop"><!-- responsivo (hamburguer)-->
+                <ul>
+                    <li><a href="#bem-vindo">Início</a>
+                    <li><a href="#sobre">Sobre</a>
+                    <li><a href="#servico">Serviços</a>
+                    <li><a href="#contato">Contato</a>
+                </ul>
+            </nav>
+        </div><!--  fechamento da interface -->
+    </header>
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <section class="caixas">
+        <div class="flex">
+
+            <!-- COLUNA ESQUERDA -->
+            <div class="coluna-esquerda">
+
+                <!-- Boas-vindas -->
+                <div class="caixas-box est_caixa" id="bem-vindo">
+                    <h2>Bem-vindo(a)!</h2>
+                    <p>Esta é uma atividade de <b>CSS avançado</b> com layout moderno</p>
+                    <button class="btn btn_primary" id="meuBotao">Começar</button>
+                </div>
+                <!-- Sobre -->
+                <div class="caixas-box est_caixa2" id="sobre">
+                    <br>
+                    <h3>Sobre</h3>
+                    <br>
+                    <p>
+                        Nesta página você praticará seletores avançados, pseudo-classes, pseudo-elementos,<br>
+                        transições, box model, posicioning e layout com <b>Flexbox</b> e <b>CSS grid</b>.
+                    </p>
+                    <br>
+                    <ul>
+                        <p><i>✔</i> Seletores combinados e de atributo</p>
+                        <p><i>✔</i> Pseudo-classes (hover, :focus, :first-child)</p>
+                        <p><i>✔</i> Pseudo-elementos (:before, :aFter)</p>
+                        <p><i>✔</i> Transições e efeitos</p>
+                        <p><i>✔</i> Responsividade com @media</p>
+                        <br>
+                    </ul>
+                </div>
+
+                <!-- Serviços -->
+                <div class="caixas-box est_caixa2" id="servico">
+                    <br>
+                    <h3>Serviços</h3>
+                    <br>
+                    <div class="flex2">
+
+                        <div class="caixa_servico">
+                            <h3>Layout Responsivo</h3>
+                            <p>Monte páginas que se adaptam a qualquer tela.</p>
+                            <a href="https://www.youtube.com/watch?v=WcGPSeuJDJ0"><button>Saiba mais</button></a>
+                        </div>
+
+                        <div class="caixa_servico">
+                            <h3>Componentes Reutilizáveis</h3>
+                            <p>Crie cartões, botões e barras de navegação escaláveis.</p>
+                            <a href="https://www.youtube.com/watch?v=v6wwSgTQ094"><button>Saiba mais</button></a>
+                        </div>
+
+                        <div class="caixa_servico">
+                            <h3>Acessibilidade</h3>
+                            <p>Aprenda boas práticas para tornar sua UI inclusiva.</p>
+                            <a href="https://www.youtube.com/watch?v=6jtuh_K_qeo"><button>Saiba mais</button></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUNA DIREITA (SIDEBAR) -->
+            <div class="coluna-direita">
+
+                <!-- Dica rápida -->
+                <div class="caixas-box est_caixa2" id="contato">
+                    <h3>Dica Rápida</h3>
+                    <br>
+                    <p>Use box-sizing: border-box; para facilitar o cálculo de larguras.</p>
+                    <br>
+                    <br>
+                    <a href="index.html">Voltar ao topo</a>
+                </div>
+
+                <!-- Links úteis -->
+                <div class="caixas-box est_caixa2">
+                    <div class="caixa_exclusiva">
+                        <h3>Links Úteis</h3>
+                        <br>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/default.asp">w3schools.com</a></li>
+                            <li><a href="https://developer.mozilla.org/pt-BR/">developer.mozilla.org</a></li>
+                            <li><a href="https://css-tricks.com/">css-tricks.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape">
+        <p>&copy;2025 &bull; 4MA - Alex Vitor Tavares Caminha - 01700338 - FrontEnd_FrameWorks &bull;</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
