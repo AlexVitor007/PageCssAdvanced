@@ -7,3 +7,5 @@ botao de reiniciar pagina ao clicar na logo
 botao começar manda um pop up alert que indique que a página está funcionando. 
 tema escuro com toggle
 descer a tela para a árrea devida 
+
+nao consegui ajeitar as divs da coluna direita ao transformar em responsivel 

@@ -1,11 +1,11 @@
 /* ==================== PALETA (variáveis) ==================== */
-:root{
+:root {
   --bg: #081122;
   --header-bg: #0d1b2a;
 
-  --surface: #12171d;       
-  --stroke: #2a2c39;         
-  --stroke-top: #363a35;     
+  --surface: #12171d;
+  --stroke: #2a2c39;
+  --stroke-top: #363a35;
 
   --text: #f5f5f5;
   --text-muted: #dcdcdc;
@@ -15,11 +15,11 @@
 
   --btn-grad-1: #2fa8ff;
   --btn-grad-2: #2384d6;
-  --btn-border: rgba(255,255,255,0.06);
-  --btn-glow: rgba(40,140,220,0.14);
+  --btn-border: rgba(255, 255, 255, 0.06);
+  --btn-glow: rgba(40, 140, 220, 0.14);
 
-  --shadow: rgba(0,0,0,0.4);
-  --shadow-hover: rgba(255,255,255,0.15);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow-hover: rgba(255, 255, 255, 0.15);
 }
 /* Reset global */
 * {
@@ -76,11 +76,10 @@ header nav ul li {
   border-radius: 10px;
   font-weight: 600;
   font-size: 14px;
-  transition: transform .14s ease, box-shadow .14s ease;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
   cursor: pointer;
   user-select: none;
   margin-top: 30px;
-  
 }
 
 .btn:active {
@@ -91,7 +90,7 @@ header nav ul li {
   background: linear-gradient(180deg, var(--btn-grad-1), var(--btn-grad-2));
   color: white;
   box-shadow: 0 6px 22px var(--btn-glow),
-              0 1px 0 rgba(255, 255, 255, 0.06) inset;
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
   border: 1px solid var(--btn-border);
 }
 
@@ -128,18 +127,23 @@ section.caixas .flex {
   box-shadow: 0 2px 6px var(--shadow);
 }
 
-.est_caixa{
-    background:
-    linear-gradient(to right, rgba(143, 127, 127, 0) 70%, rgba(8, 97, 250, 0.15) 100%),
+.est_caixa {
+  background: linear-gradient(
+      to right,
+      rgba(143, 127, 127, 0) 70%,
+      rgba(8, 97, 250, 0.15) 100%
+    ),
     var(--surface);
 }
 
-.est_caixa2{
-    background: 
-    linear-gradient(to top, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 40%),
+.est_caixa2 {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 40%
+    ),
     var(--surface);
 }
-
 
 .caixas .caixas-box:hover {
   transform: scale(1.02);
@@ -158,7 +162,7 @@ section.caixas .flex {
 /* ==================== LISTAS ==================== */
 .caixas .caixas-box i {
   margin-right: 8px;
-  color: var(--success) /* verde claro */
+  color: var(--success); /* verde claro */
 }
 
 .caixas .caixas-box ul {
@@ -170,7 +174,15 @@ section.caixas .flex {
 .caixas .caixas-box ul li {
   margin: 6px 0;
 }
-
+/* ==================== MENU HAMBURGUER ==================== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
 /* ==================== FLEX DE SERVIÇOS ==================== */
 section.caixas .flex2 {
   display: flex;
@@ -205,7 +217,7 @@ section.caixas .flex2 {
 
 .caixas .caixas-box .caixa_servico p {
   font-size: 14px;
-  color:  var(--text-muted);
+  color: var(--text-muted);
   margin-top: -80px; /* Aproxima do h3 */
   text-align: left; /* Alinha o texto à esquerda */
   line-height: 1.5; /* Espaçamento entre linhas mais legível */
@@ -281,19 +293,170 @@ section.caixas .flex2 {
   border-top: 2px solid #1b263b;
 }
 /* ==================== RESPONSIVIDADE ==================== */
-@media (max-width: 900px) {
+/* Telas até 1024px (tablets grandes) */
+@media (max-width: 1024px) {
+  section.caixas .flex {
+    gap: 30px;
+  }
+
+  .caixas .caixas-box .caixa_servico {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .caixas .caixas-box .caixa_servico {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .caixas .caixas-box .caixa_servico p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .caixas .caixas-box .caixa_servico button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .coluna-direita .caixas-box {
+    margin-left: 0;
+    height: auto;
+  }
+
+  .coluna-direita p {
+    width: 100%;
+  }
+}
+
+/* Telas até 768px (tablets médios) */
+@media (max-width: 768px) {
+  header > .interface {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-desktop {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-desktop.ativo {
+    display: block;
+  }
+
+  .menu-desktop ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-desktop ul li {
+    display: block;
+    padding: 10px 0;
+  }
+  .menu-desktop ul {
+    padding-left: 0;
+  }
+
   section.caixas .flex {
     flex-direction: column;
+    gap: 30px;
   }
 
   section.caixas .flex2 {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .caixas .caixas-box .caixa_servico {
     max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .caixas .caixas-box .caixa_servico p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .caixas .caixas-box .caixa_servico button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .coluna-direita {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .coluna-direita .caixas-box {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 20px;
   }
 }
 
+/* Telas até 480px (celulares pequenos como 320px) */
+@media (max-width: 480px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
+  header nav ul li {
+    display: block;
+    padding: 5px 0;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .caixas .caixas-box {
+    padding: 15px;
+  }
+
+  .caixas .caixas-box h2 {
+    font-size: 24px;
+  }
+
+  .caixas .caixas-box h3 {
+    font-size: 18px;
+  }
+
+  .caixas .caixas-box p,
+  .coluna-direita p {
+    font-size: 13px;
+  }
+  .caixas .caixas-box .caixa_servico {
+    padding: 16px;
+  }
+
+  .caixas .caixas-box .caixa_servico p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .caixas .caixas-box .caixa_servico button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rodape {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
