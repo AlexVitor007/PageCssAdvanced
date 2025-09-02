@@ -343,6 +343,11 @@ section.caixas .flex2 {
     display: block;
   }
 
+  .rodape {
+    font-size: 14px;
+    padding: 20px 12px;
+  }
+
   .menu-desktop {
     display: none;
     width: 100%;
@@ -456,7 +461,8 @@ section.caixas .flex2 {
   }
 
   .rodape {
-    font-size: 12px;
-    padding: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 20px 8px;
   }
 }
